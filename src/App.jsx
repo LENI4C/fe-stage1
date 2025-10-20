@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import ProfileCard from "./components/ProfileCard";
-import ContactUs from "./components/ContactUs";
-import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact";
+import About from "./components/About";
 
 const App = () => {
     return (
@@ -13,8 +13,8 @@ const App = () => {
                 <main className="container mx-auto px-4 py-8">
                     <Routes>
                         <Route path="/" element={<ProfileCard />} />
-                        <Route path="/contact" element={<ContactUs />} />
-                        <Route path="/about" element={<AboutMe />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/about" element={<About />} />
                     </Routes>
                 </main>
             </div>

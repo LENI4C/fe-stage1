@@ -22,7 +22,7 @@ const ProfileCard = () => {
             className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto"
             data-testid="test-profile-card"
         >
-            <header className="flex flex-col md:flex-row items-start p-8 md:p-10 gap-6">
+            <header className="flex flex-col md:flex-row items-center md:items-start p-4 sm:p-6 md:p-8 lg:p-10 gap-4 sm:gap-6">
                 <figure className="flex flex-col items-center text-center md:flex-shrink-0 md:mr-8">
                     <img
                         src="/images/lenny.jpg"
@@ -55,7 +55,7 @@ const ProfileCard = () => {
                         className="text-sm text-gray-500 font-mono bg-gray-50 px-3 py-2 rounded-md inline-block border border-gray-200"
                         data-testid="test-user-time"
                     >
-                        Current time: {currentTime} ms
+                        Current time (since Jan 1 1970): {currentTime} ms
                     </div>
                 </div>
             </header>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ContactUs = () => {
+const Contact = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -79,24 +79,26 @@ const ContactUs = () => {
 
     if (isSubmitted) {
         return (
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-2xl mx-auto px-2 sm:px-4">
                 <div
-                    className="bg-white rounded-2xl shadow-2xl p-8 text-center"
+                    className="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 text-center"
                     data-testid="test-contact-success"
                     role="status"
                     aria-live="polite"
                 >
-                    <div className="text-green-500 text-6xl mb-4">✓</div>
-                    <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                    <div className="text-green-500 text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">
+                        ✓
+                    </div>
+                    <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">
                         Message Sent Successfully!
                     </h2>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
                         Thank you for your message. We'll get back to you as
                         soon as possible.
                     </p>
                     <button
                         onClick={() => setIsSubmitted(false)}
-                        className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        className="bg-indigo-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-sm sm:text-base"
                     >
                         Send Another Message
                     </button>
@@ -106,18 +108,22 @@ const ContactUs = () => {
     }
 
     return (
-        <div className="max-w-2xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-2xl p-8">
-                <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-                    Contact Us
+        <div className="max-w-2xl mx-auto px-2 sm:px-4">
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8">
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8 text-center">
+                    Contact Leni4c
                 </h1>
 
-                <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+                <form
+                    onSubmit={handleSubmit}
+                    className="space-y-4 sm:space-y-6"
+                    noValidate
+                >
                     {/* Full Name Field */}
                     <div>
                         <label
                             htmlFor="name"
-                            className="block text-sm font-medium text-gray-700 mb-2"
+                            className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2"
                         >
                             Full Name *
                         </label>
@@ -127,7 +133,7 @@ const ContactUs = () => {
                             name="name"
                             value={formData.name}
                             onChange={handleInputChange}
-                            className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-200 ${
+                            className={`w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-md sm:rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-200 text-sm sm:text-base ${
                                 errors.name
                                     ? "border-red-500 bg-red-50"
                                     : "border-gray-300"
@@ -157,7 +163,7 @@ const ContactUs = () => {
                     <div>
                         <label
                             htmlFor="email"
-                            className="block text-sm font-medium text-gray-700 mb-2"
+                            className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2"
                         >
                             Email *
                         </label>
@@ -167,7 +173,7 @@ const ContactUs = () => {
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
-                            className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-200 ${
+                            className={`w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-md sm:rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-200 text-sm sm:text-base ${
                                 errors.email
                                     ? "border-red-500 bg-red-50"
                                     : "border-gray-300"
@@ -197,7 +203,7 @@ const ContactUs = () => {
                     <div>
                         <label
                             htmlFor="subject"
-                            className="block text-sm font-medium text-gray-700 mb-2"
+                            className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2"
                         >
                             Subject *
                         </label>
@@ -207,7 +213,7 @@ const ContactUs = () => {
                             name="subject"
                             value={formData.subject}
                             onChange={handleInputChange}
-                            className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-200 ${
+                            className={`w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-md sm:rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-200 text-sm sm:text-base ${
                                 errors.subject
                                     ? "border-red-500 bg-red-50"
                                     : "border-gray-300"
@@ -237,17 +243,17 @@ const ContactUs = () => {
                     <div>
                         <label
                             htmlFor="message"
-                            className="block text-sm font-medium text-gray-700 mb-2"
+                            className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2"
                         >
                             Message *
                         </label>
                         <textarea
                             id="message"
                             name="message"
-                            rows={6}
+                            rows={4}
                             value={formData.message}
                             onChange={handleInputChange}
-                            className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-200 resize-vertical ${
+                            className={`w-full px-3 py-2 sm:px-4 sm:py-3 border rounded-md sm:rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-200 resize-vertical text-sm sm:text-base ${
                                 errors.message
                                     ? "border-red-500 bg-red-50"
                                     : "border-gray-300"
@@ -276,7 +282,7 @@ const ContactUs = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-200"
+                        className="w-full bg-indigo-600 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-md sm:rounded-lg font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-200 text-sm sm:text-base"
                         data-testid="test-contact-submit"
                     >
                         Send Message
@@ -287,4 +293,4 @@ const ContactUs = () => {
     );
 };
 
-export default ContactUs;
+export default Contact;
